@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Sanidhya",
-  "short_name": "Sanidhya",
-  "description": "Sanidhya is a full-stack developer with 4 years of experience.",
+  "name": "Joshua Elizondo - Portfolio",
+  "short_name": "Joshua Portfolio",
+  "description": "Joshua Elizondo is a full-stack developer specializing in modern web technologies.",
   "icons": [
     {
       "src": "icons/icon-192x192.png",

@@ -4,10 +4,6 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiNextdotjs } from "react-icons/si";
 
-import carhubImg from "@/public/carhub.png";
-import realtorImg from "@/public/realtor.png";
-import ecommerceImg from "@/public/ecommerce.png";
-
 // Navigation links
 export const LINKS = [
   {
@@ -42,6 +38,7 @@ export const EXTRA_LINKS = {
   github: "https://github.com/JoshuaEA54",
   resume: "/resume_joshua_2025.pdf",
   email: "joshuaeelizondo@gmail.com",
+  source_code: "https://github.com/JoshuaEA54/portfolio", // Enlace al código fuente
 } as const;
 
 // Data for work experience
@@ -79,28 +76,28 @@ export const EXPERIENCES_DATA = [
 // Data for projects
 export const PROJECTS_DATA = [
   {
-    title: "CarHub",
+    title: "Mi Proyecto 1",
     description:
-      "A web app that is built using NextJS and enables users to quickly search and obtain information about cars.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Headless UI"],
-    imageUrl: carhubImg,
-    projectUrl: "https://carhb.vercel.app/",
+      "Describe aquí tu primer proyecto. Qué tecnologías usaste, qué problemas resuelve, etc.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
+    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
   {
-    title: "Realtor",
+    title: "Mi Proyecto 2", 
     description:
-      "Buy and rent homes for everyone. I was the front-end developer. It has features like filtering, sorting, and pagination.",
-    tags: ["React", "Chakra UI", "Next.js", "Framer Motion", "React Icons"],
-    imageUrl: realtorImg,
-    projectUrl: "https://real-estate-app-react.vercel.app/",
+      "Describe aquí tu segundo proyecto. Incluye las características principales y el valor que aporta.",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
   {
-    title: "ECommerce Store",
+    title: "Mi Proyecto 3",
     description:
-      "A NextJS-based eCommerce store that allows users to order different products. It supports real-time payments using Stripe.",
-    tags: ["React", "Next.js", "Sanity", "React Router", "Stripe"],
-    imageUrl: ecommerceImg,
-    projectUrl: "https://ecommerce-app-next.vercel.app/",
+      "Describe aquí tu tercer proyecto. Menciona los desafíos que enfrentaste y cómo los resolviste.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
 ] as const;
 
