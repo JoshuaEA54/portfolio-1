@@ -38,11 +38,10 @@ export const LINKS = [
 
 // External links
 export const EXTRA_LINKS = {
-  linkedin: "https://www.linkedin.com/in/sanidhyy",
-  github: "https://github.com/sanidhyy",
-  resume: "/resume.pdf",
-  source_code: "https://github.com/sanidhyy/portfolio",
-  email: "sanidhya.verma12345@gmail.com",
+  linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
+  github: "https://github.com/JoshuaEA54",
+  resume: "/resume_joshua_2025.pdf",
+  email: "joshuaeelizondo@gmail.com",
 } as const;
 
 // Data for work experience
@@ -117,16 +116,24 @@ export const SKILLS_DATA = [
   "Git",
   "Tailwind",
   "Shadcn UI",
-  "Three.js",
-  "Framer Motion",
   "Prisma",
   "MySQL",
   "PostgreSQL",
-  "Redux",
-  "Express",
+  "Zustand",
   "Python",
-  "Django",
+  "C++",
+  "Java",
 ] as const;
 
 // Owner name
-export const OWNER_NAME = "Sanidhya Kumar Verma";
+export const OWNER_NAME = "Joshua Elizondo Abarca";
+
+// Original Author Credits (Required by MIT License)
+export const ORIGINAL_AUTHOR_CREDITS = {
+  name: "Sanidhya Kumar Verma",
+  email: "sanidhya.verma12345@gmail.com",
+  github: "https://github.com/sanidhyy",
+  repository: "https://github.com/sanidhyy/portfolio",
+  license: "MIT",
+  message: "Portfolio template by Sanidhya Kumar Verma - MIT License"
+} as const;

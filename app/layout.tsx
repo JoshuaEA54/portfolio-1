@@ -23,11 +23,17 @@ export const metadata: Metadata = {
   title: `${OWNER_NAME.split(" ")[0]} | Personal Portfolio`,
   description: `${
     OWNER_NAME.split(" ")[0]
-  } is a full-stack developer with 4 years of experience.`,
-  authors: {
-    name: OWNER_NAME,
-    url: EXTRA_LINKS.github,
-  },
+  } is a full-stack developer with experience in modern web technologies.`,
+  authors: [
+    {
+      name: OWNER_NAME,
+      url: EXTRA_LINKS.github,
+    },
+    {
+      name: "Sanidhya Kumar Verma",
+      url: "https://github.com/sanidhyy",
+    }
+  ],
   keywords: [
     "reactjs",
     "nextjs",

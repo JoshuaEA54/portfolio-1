@@ -1,47 +1,34 @@
 <a name="readme-top"></a>
 
-# A Modern UI/UX Portfolio using Next.JS
+# Mi Portfolio Personal - Joshua Elizondo
 
-![A Modern UI/UX Portfolio using Next.JS](/.github/images/img_main.png "A Modern UI/UX Portfolio using Next.JS")
+![Portfolio Personal](/.github/images/img_main.png "Portfolio Personal")
 
-[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/blob/main/LICENSE "GitHub license")
-[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/commits/main "Maintenance")
-[![GitHub branches](https://flat.badgen.net/github/branches/sanidhyy/portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/branches "GitHub branches")
-[![Github commits](https://flat.badgen.net/github/commits/sanidhyy/portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/commits "Github commits")
-[![GitHub issues](https://flat.badgen.net/github/issues/sanidhyy/portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/issues "GitHub issues")
-[![GitHub pull requests](https://flat.badgen.net/github/prs/sanidhyy/portfolio?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/portfolio/pulls "GitHub pull requests")
-[![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.sanidhy.me/ "Vercel status")
+[![GitHub license](https://flat.badgen.net/github/license/JoshuaEA54/portfolio?icon=github&color=black&scale=1.01)](https://github.com/JoshuaEA54/portfolio/blob/main/LICENSE "GitHub license")
+[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/JoshuaEA54/portfolio/commits/main "Maintenance")
 
 <!-- Table of Contents -->
 <details>
 
 <summary>
 
-# :notebook_with_decorative_cover: Table of Contents
+# :notebook_with_decorative_cover: Tabla de Contenidos
 
 </summary>
 
-- [Folder Structure](#bangbang-folder-structure)
-- [Getting Started](#toolbox-getting-started)
-- [Screenshots](#camera-screenshots)
-- [Tech Stack](#gear-tech-stack)
-- [Stats](#wrench-stats)
-- [Contribute](#raised_hands-contribute)
-- [Acknowledgements](#gem-acknowledgements)
-- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
-- [Follow Me](#rocket-follow-me)
-- [Learn More](#books-learn-more)
-- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
-- [Give A Star](#star-give-a-star)
-- [Star History](#star2-star-history)
-- [Give A Star](#star-give-a-star)
+- [Estructura de Carpetas](#bangbang-estructura-de-carpetas)
+- [Empezar](#toolbox-empezar)
+- [Capturas de Pantalla](#camera-capturas-de-pantalla)
+- [Stack Tecnológico](#gear-stack-tecnológico)
+- [Créditos](#gem-créditos)
+- [Aprende Más](#books-aprende-más)
+- [Desplegar en Vercel](#page_with_curl-desplegar-en-vercel)
 
 </details>
 
-## :bangbang: Folder Structure
+## :bangbang: Estructura de Carpetas
 
-Here is the folder structure of My Portfolio.
+Aquí está la estructura de carpetas de mi Portfolio.
 
 ```bash
 portfolio/
@@ -59,12 +46,12 @@ portfolio/
     |-- footer.tsx
     |-- header.tsx
     |-- index.ts
-    |-- intro.ts
-    |-- projects.ts
-    |-- section-divider.ts
-    |-- section-heading.ts
-    |-- skills.ts
-    |-- theme-switch.ts
+    |-- intro.tsx
+    |-- projects.tsx
+    |-- section-divider.tsx
+    |-- section-heading.tsx
+    |-- skills.tsx
+    |-- theme-switch.tsx
   |- constants/
     |-- index.ts
   |- context/
@@ -83,19 +70,19 @@ portfolio/
   |- next.config.js
   |- package-lock.json
   |- package.json
-  |- postcss.config.cjs
-  |- tailwind.config.cjs
+  |- postcss.config.js
+  |- tailwind.config.js
   |- tsconfig.json
 ```
 
 <br />
 
-## :toolbox: Getting Started
+## :toolbox: Empezar
 
-1. Make sure **Git** and **NodeJS** is installed.
-2. Clone this repository to your local computer.
-3. Create `.env.local` file in root folder.
-4. Contents of `.env.local`:
+1. Asegúrate de que **Git** y **NodeJS** estén instalados.
+2. Clona este repositorio en tu computadora local.
+3. Crea un archivo `.env.local` en la carpeta raíz.
+4. Contenido de `.env.local`:
 
 ```env
 # .env.local
@@ -108,54 +95,51 @@ NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xxxxxxxxxx
 NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxxxxxxxxxxx
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=XXXXXXXXXXXXXXX
 
-# google verification key (optional) - used for domain verification on https://search.google.com/search-console
+# google verification key (optional) - used for domain verification
 NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ```
 
-5. Create new account in [EmailJS](https://www.emailjs.com/ "EmailJS").
+5. Crea una nueva cuenta en [EmailJS](https://www.emailjs.com/ "EmailJS").
 
-6. From dashboard, choose Email Services > Add New Service and connect your mail to emailjs.
+6. Desde el dashboard, elige Email Services > Add New Service y conecta tu correo a emailjs.
 
-7. Once new service is configured, copy your **Service ID** to `NEXT_PUBLIC_EMAILJS_SERVICE_ID`.
+7. Una vez configurado el nuevo servicio, copia tu **Service ID** a `NEXT_PUBLIC_EMAILJS_SERVICE_ID`.
 
-8. Now, go to Email Templates > Create New Template to create your mail template. Once it is done, you can copy **Template ID** to `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`.
+8. Ahora, ve a Email Templates > Create New Template para crear tu plantilla de correo. Una vez hecho, puedes copiar el **Template ID** a `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`.
 
-9. To get your **Public Key**, click on your username on navbar and go to account settings > Copy Public Key to `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`.
+9. Para obtener tu **Public Key**, haz clic en tu nombre de usuario en la barra de navegación y ve a configuración de cuenta > Copia Public Key a `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`.
 
-10. Open terminal in root directory. Run `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+10. Abre la terminal en el directorio raíz. Ejecuta `npm install` o `bun install`.
 
-![Copy Public Key](/.github/images/step_emailjs.png "Copy Public Key")
+11. Ahora la aplicación está completamente configurada :+1: y puedes comenzar a usar esta aplicación usando `npm run dev` o `bun dev`.
 
-11. Now app is fully configured :+1: and you can start using this app using `npm run dev` or `yarn dev`.
+**NOTA:** Asegúrate de no compartir estas claves públicamente.
 
-**NOTE:** Ensure you don't share these keys publicly.
+## :camera: Capturas de Pantalla:
 
-## :camera: Screenshots:
+![Interfaz Moderna con Tailwind CSS](/.github/images/img1.png "Interfaz Moderna con Tailwind CSS")
 
-![Modern UI/UX using Tailwind CSS](/.github/images/img1.png "Modern UI/UX using Tailwind CSS")
+![Showcase de Proyectos](/.github/images/img2.png "Showcase de Proyectos")
 
-![Showcase Projects](/.github/images/img2.png "Showcase Projects")
+![Experiencias Profesionales](/.github/images/img3.png "Experiencias Profesionales")
 
-![Tell about your Experiences](/.github/images/img3.png "Tell about your Experiences")
+![Formulario de Contacto Funcional](/.github/images/img4.png "Formulario de Contacto Funcional")
 
-![Working Contact Form](/.github/images/img4.png "Working Contact Form")
-
-## :gear: Tech Stack
+## :gear: Stack Tecnológico
 
 [![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Vercel](https://skillicons.dev/icons?i=vercel "Vercel")](https://vercel.app/ "Vercel")
 
-## :wrench: Stats
+## :gem: Créditos
 
-[![Stats for My portfolio](/.github/images/stats.svg "Stats for My portfolio")](https://pagespeed.web.dev/analysis?url=https://www.sanidhy.me/ "Stats for My portfolio")
+### Autor Original
+Este portfolio está basado en el excelente trabajo de **[Sanidhya Kumar Verma](https://github.com/sanidhyy)**.
 
-## :raised_hands: Contribute
+- **Repositorio Original**: [sanidhyy/portfolio](https://github.com/sanidhyy/portfolio)
+- **Autor**: Sanidhya Kumar Verma
+- **Licencia**: MIT
 
-You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
-
-## :gem: Acknowledgements
-
-Useful resources and libraries that are used in My Portfolio
+### Librerías y Recursos Útiles
 
 - [Email JS](https://www.emailjs.com/ "Email JS")
 - [Framer Motion](https://www.framer.com/motion/ "Framer Motion")
@@ -166,44 +150,24 @@ Useful resources and libraries that are used in My Portfolio
 - [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer "React Intersection Observer")
 - [Next PWA](https://www.npmjs.com/package/next-pwa "Next PWA")
 
-## :coffee: Buy Me a Coffee
+## :books: Aprende Más
 
-[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/sanidhy "Buy me a Coffee")
+Para aprender más sobre Next.js, echa un vistazo a los siguientes recursos:
 
-## :rocket: Follow Me
+- [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
+- [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
 
-[![Follow Me](https://img.shields.io/github/followers/sanidhyy?style=social&label=Follow&maxAge=2592000)](https://github.com/sanidhyy "Follow Me")
-[![Tweet about this project](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2FTechnicalShubam)](https://twitter.com/intent/tweet?text=Check+out+this+amazing+app:&url=https%3A%2F%2Fgithub.com%2Fsanidhyy%portfolio "Tweet about this project")
-[![Subscribe to my YouTube Channel](https://img.shields.io/youtube/channel/subscribers/UCNAz_hUVBG2ZUN8TVm0bmYw)](https://www.youtube.com/@OPGAMER./?sub_confirmation=1 "Subscribe to my YouTube Channel")
+Puedes revisar [el repositorio de GitHub de Next.js](https://github.com/vercel/next.js/) - ¡tus comentarios y contribuciones son bienvenidos!
 
-## :books: Learn More
+## :page_with_curl: Desplegar en Vercel
 
-To learn more about Next.js, take a look at the following resources:
+La forma más fácil de desplegar tu aplicación Next.js es usar la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Consulta nuestra [documentación de despliegue de Next.js](https://nextjs.org/docs/deployment) para más detalles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## :page_with_curl: Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## :star: Give A Star
-
-You can also give this repository a star to show more people and they can use this repository.
-
-## :star2: Star History
-
-<a href="https://star-history.com/#sanidhyy/portfolio&Timeline">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sanidhyy/portfolio&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sanidhyy/portfolio&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sanidhyy/portfolio&type=Timeline" />
-  </picture>
-</a>
+**Nota**: Si utilizas esta plantilla, por favor mantén los créditos al autor original según la licencia MIT.
 
 <br />
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>

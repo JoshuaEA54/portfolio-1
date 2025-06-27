@@ -3,41 +3,15 @@
   "version": "1.1.0",
   "private": true,
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Joshua Elizondo Abarca",
+    "email": "joshuaeelizondo@gmail.com",
+    "url": "https://github.com/JoshuaEA54"
   },
-  "description": "Sanidhya is a full-stack developer with 4 years of experience.",
-  "keywords": [
-    "reactjs",
-    "nextjs",
-    "vercel",
-    "react",
-    "portfolio",
-    "portfolio-next",
-    "emailjs",
-    "framer-motion",
-    "react-hot-toast",
-    "react-icons",
-    "react-intersection-observer",
-    "react-vertical-timeline",
-    "tailwindcss",
-    "ui/ux",
-    "js",
-    "javascript",
-    "typescript",
-    "html",
-    "css"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanidhyy/portfolio.git"
-  },
-  "homepage": "https://github.com/sanidhyy/portfolio#readme",
-  "bugs": {
-    "url": "https://github.com/sanidhyy/portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+  "credits": {
+    "originalAuthor": "Sanidhya Kumar Verma",
+    "originalRepository": "https://github.com/sanidhyy/portfolio",
+    "license": "MIT",
+    "note": "This portfolio is based on the amazing work by Sanidhya Kumar Verma"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -74,16 +48,6 @@
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/react-vertical-timeline-component": "^3.3.5"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "overrides": {
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3"
