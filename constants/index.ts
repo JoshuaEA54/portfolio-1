@@ -1,8 +1,22 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt, FaJava, FaPython } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import { SiNextdotjs } from "react-icons/si";
+import { 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiJavascript, 
+  SiHtml5, 
+  SiCss3, 
+  SiTailwindcss, 
+  SiPrisma, 
+  SiMysql, 
+  SiPostgresql, 
+  SiCplusplus,
+  SiSupabase,
+  SiFirebase
+} from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 // Navigation links
 export const LINKS = [
@@ -101,25 +115,98 @@ export const PROJECTS_DATA = [
   },
 ] as const;
 
-// Data for skills
+// Data for skills with icons and colors
 export const SKILLS_DATA = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Shadcn UI",
-  "Prisma",
-  "MySQL",
-  "PostgreSQL",
-  "Zustand",
-  "Python",
-  "C++",
-  "Java",
+  {
+    name: "React",
+    icon: React.createElement(FaReact),
+    color: "#61DAFB"
+  },
+  {
+    name: "TypeScript",
+    icon: React.createElement(SiTypescript),
+    color: "#3178C6"
+  },
+  {
+    name: "JavaScript",
+    icon: React.createElement(SiJavascript),
+    color: "#F7DF1E"
+  },
+  {
+    name: "Next.js",
+    icon: React.createElement(SiNextdotjs),
+    color: "#000000"
+  },
+  {
+    name: "Tailwind CSS",
+    icon: React.createElement(SiTailwindcss),
+    color: "#06B6D4"
+  },
+  {
+    name: "HTML",
+    icon: React.createElement(SiHtml5),
+    color: "#E34F26"
+  },
+  {
+    name: "CSS",
+    icon: React.createElement(SiCss3),
+    color: "#1572B6"
+  },
+  {
+    name: "Node.js",
+    icon: React.createElement(FaNodeJs),
+    color: "#339933"
+  },
+  {
+    name: "Git",
+    icon: React.createElement(FaGitAlt),
+    color: "#F05032"
+  },
+  {
+    name: "PostgreSQL",
+    icon: React.createElement(SiPostgresql),
+    color: "#336791"
+  },
+  {
+    name: "MySQL",
+    icon: React.createElement(SiMysql),
+    color: "#4479A1"
+  },
+  {
+    name: "Prisma",
+    icon: React.createElement(SiPrisma),
+    color: "#2D3748"
+  },
+  {
+    name: "Python",
+    icon: React.createElement(FaPython),
+    color: "#3776AB"
+  },
+  {
+    name: "Java",
+    icon: React.createElement(FaJava),
+    color: "#ED8B00"
+  },
+  {
+    name: "C++",
+    icon: React.createElement(SiCplusplus),
+    color: "#00599C"
+  },
+  {
+    name: "Supabase",
+    icon: React.createElement(SiSupabase),
+    color: "#3ECF8E"
+  },
+  {
+    name: "Firebase",
+    icon: React.createElement(SiFirebase),
+    color: "#FFCA28"
+  },
+  {
+    name: "Framer Motion",
+    icon: React.createElement(TbBrandFramerMotion),
+    color: "#0055FF"
+  }
 ] as const;
 
 // Owner name
