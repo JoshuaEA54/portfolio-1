@@ -1,5 +1,4 @@
-// Import necessary dependencies and components.
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+"use client"; 
 
 import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
 import { motion } from "framer-motion";
@@ -14,9 +13,7 @@ import { useSectionInView } from "@/lib/hooks";
 
 import SectionHeading from "./section-heading";
 
-// Define the Contact component.
 const Contact = () => {
-  // Use the useSectionInView custom hook to track when the "Contact" section is in view.
   const { ref } = useSectionInView("Contact");
   const [loading, setLoading] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -28,9 +25,7 @@ const Contact = () => {
 
   const recaptchaRef = createRef<ReCAPTCHA>();
 
-  // Handle form field changes.
   const handleChange = (e: FormEvent) => {
-    // Extract the field name and value from the event.
     const { name, value } = e.target as HTMLInputElement;
     setForm({ ...form, [name]: value });
   };
@@ -47,26 +42,22 @@ const Contact = () => {
           to_email: form.email,
           message: form.message,
 
-          // verifying google recaptcha
           "g-recaptcha-response": value,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
       )
       .then(
         () => {
-          // Success: Display a success message using toast.
           toast.success(
             "Thank You. I will get back to you as soon as possible."
           );
         },
         (error: EmailJSResponseStatus) => {
-          // Error handling: Display an error message and log the error.
           console.error(error);
           toast.error(error.text ?? "Something went wrong!");
         }
       )
       .finally(() => {
-        // Clear the loading indicator, and reset the form fields.
         setLoading(false);
         recaptchaRef?.current?.reset();
         setForm({
@@ -77,28 +68,22 @@ const Contact = () => {
       });
   };
 
-  // Validate the form on submission.
   const validateForm = (): boolean => {
-    // Extract form fields.
     const { name, email, message } = form;
 
-    // Validate the name field.
     if (name.trim().length < 3) {
       toast.error("Invalid Name");
       return false;
     }
 
-    // Regular expression for email validation.
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // Validate the email field.
     if (!email.trim().toLowerCase().match(emailRegex)) {
       toast.error("Invalid E-mail");
       return false;
     }
 
-    // Validate the message field.
     if (message.trim().length < 5) {
       toast.error("Invalid Message");
       return false;
@@ -107,26 +92,20 @@ const Contact = () => {
     return true;
   };
 
-  // Handle form submission.
   const handleSubmit = (e: FormEvent) => {
-    // Prevent the default page reload.
     e.preventDefault();
 
-    // Validate the form.
     if (!validateForm()) return false;
 
-    // Show a loading indicator.
     setLoading(true);
 
     if (!recaptchaRef) return;
 
-    // execute google recaptcha
     recaptchaRef.current?.execute();
   };
 
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  // Return the Contact section with animations and the contact form.
   return (
     <motion.section
       id="contact"
@@ -158,7 +137,6 @@ const Contact = () => {
         ref={formRef}
         onSubmit={handleSubmit}
       >
-        {/* Input fields for name, email, and message. */}
         <input
           type="text"
           name="name"
@@ -214,7 +192,6 @@ const Contact = () => {
           />
         )}
 
-        {/* Submit button with conditional rendering for loading state. */}
         <button
           type="submit"
           className="group flex self-center items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
@@ -234,5 +211,4 @@ const Contact = () => {
   );
 };
 
-// Export the Contact component.
 export default Contact;
