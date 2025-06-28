@@ -1,24 +1,43 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaNodeJs, FaGitAlt, FaJava, FaPython } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaJava,
+  FaPython,
+  FaBootstrap,
+  FaFigma,
+  FaDocker,
+} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import { 
-  SiNextdotjs, 
-  SiTypescript, 
-  SiJavascript, 
-  SiHtml5, 
-  SiCss3, 
-  SiTailwindcss, 
-  SiPrisma, 
-  SiMysql, 
-  SiPostgresql, 
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiPrisma,
+  SiMysql,
+  SiPostgresql,
   SiCplusplus,
   SiSupabase,
-  SiFirebase
+  SiMongodb,
+  SiOracle,
+  SiGraphql,
+  SiJest,
+  SiEslint,
+  SiPrettier,
+  SiVercel,
+  SiSwagger,
+  SiJsonwebtokens,
+  SiZod,
+  SiFirebase,
 } from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { BiLogoSpringBoot } from "react-icons/bi";
 
-// Navigation links
+
 export const LINKS = [
   {
     name: "Home",
@@ -46,16 +65,16 @@ export const LINKS = [
   },
 ] as const;
 
-// External links
+
 export const EXTRA_LINKS = {
   linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
   github: "https://github.com/JoshuaEA54",
   resume: "/resume_joshua_2025.pdf",
   email: "joshuaeelizondo@gmail.com",
-  source_code: "https://github.com/JoshuaEA54/portfolio", // Enlace al código fuente
+  source_code: "https://github.com/JoshuaEA54/portfolio",
 } as const;
 
-// Data for work experience
+
 export const EXPERIENCES_DATA = [
   {
     title: "Passed High School",
@@ -87,22 +106,22 @@ export const EXPERIENCES_DATA = [
   },
 ] as const;
 
-// Data for projects
+
 export const PROJECTS_DATA = [
   {
     title: "Mi Proyecto 1",
     description:
       "Describe aquí tu primer proyecto. Qué tecnologías usaste, qué problemas resuelve, etc.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind"],
-    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    imageUrl: "/profile.png", // Usando imagen existente temporalmente
     projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
   {
-    title: "Mi Proyecto 2", 
+    title: "Mi Proyecto 2",
     description:
       "Describe aquí tu segundo proyecto. Incluye las características principales y el valor que aporta.",
     tags: ["React", "Node.js", "MongoDB", "Express"],
-    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    imageUrl: "/profile.png", // Usando imagen existente temporalmente
     projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
   {
@@ -110,114 +129,54 @@ export const PROJECTS_DATA = [
     description:
       "Describe aquí tu tercer proyecto. Menciona los desafíos que enfrentaste y cómo los resolviste.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    imageUrl: "/project-placeholder.png", // Placeholder temporal
+    imageUrl: "/profile.png", // Usando imagen existente temporalmente
     projectUrl: "#", // Placeholder - cambiar por tu URL real
   },
 ] as const;
 
-// Data for skills with icons and colors
+
 export const SKILLS_DATA = [
-  {
-    name: "React",
-    icon: React.createElement(FaReact),
-    color: "#61DAFB"
-  },
-  {
-    name: "TypeScript",
-    icon: React.createElement(SiTypescript),
-    color: "#3178C6"
-  },
-  {
-    name: "JavaScript",
-    icon: React.createElement(SiJavascript),
-    color: "#F7DF1E"
-  },
-  {
-    name: "Next.js",
-    icon: React.createElement(SiNextdotjs),
-    color: "#000000"
-  },
-  {
-    name: "Tailwind CSS",
-    icon: React.createElement(SiTailwindcss),
-    color: "#06B6D4"
-  },
-  {
-    name: "HTML",
-    icon: React.createElement(SiHtml5),
-    color: "#E34F26"
-  },
-  {
-    name: "CSS",
-    icon: React.createElement(SiCss3),
-    color: "#1572B6"
-  },
-  {
-    name: "Node.js",
-    icon: React.createElement(FaNodeJs),
-    color: "#339933"
-  },
-  {
-    name: "Git",
-    icon: React.createElement(FaGitAlt),
-    color: "#F05032"
-  },
-  {
-    name: "PostgreSQL",
-    icon: React.createElement(SiPostgresql),
-    color: "#336791"
-  },
-  {
-    name: "MySQL",
-    icon: React.createElement(SiMysql),
-    color: "#4479A1"
-  },
-  {
-    name: "Prisma",
-    icon: React.createElement(SiPrisma),
-    color: "#2D3748"
-  },
-  {
-    name: "Python",
-    icon: React.createElement(FaPython),
-    color: "#3776AB"
-  },
-  {
-    name: "Java",
-    icon: React.createElement(FaJava),
-    color: "#ED8B00"
-  },
-  {
-    name: "C++",
-    icon: React.createElement(SiCplusplus),
-    color: "#00599C"
-  },
-  {
-    name: "Supabase",
-    icon: React.createElement(SiSupabase),
-    color: "#3ECF8E"
-  },
-  {
-    name: "Firebase",
-    icon: React.createElement(SiFirebase),
-    color: "#FFCA28"
-  },
-  {
-    name: "Framer Motion",
-    icon: React.createElement(TbBrandFramerMotion),
-    color: "#0055FF"
-  }
+  
+  { name: "JavaScript", icon: React.createElement(SiJavascript) },
+  { name: "TypeScript", icon: React.createElement(SiTypescript) },
+  { name: "Python", icon: React.createElement(FaPython) },
+  { name: "Java", icon: React.createElement(FaJava) },
+  { name: "C++", icon: React.createElement(SiCplusplus) },
+  { name: "React", icon: React.createElement(FaReact) },
+  { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+  { name: "HTML5", icon: React.createElement(SiHtml5) },
+  { name: "CSS3", icon: React.createElement(SiCss3) },
+  { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss) },
+  { name: "Bootstrap", icon: React.createElement(FaBootstrap) },
+  { name: "Node.js", icon: React.createElement(FaNodeJs) },
+  { name: "GraphQL", icon: React.createElement(SiGraphql) },
+  { name: "Supabase", icon: React.createElement(SiSupabase) },
+  { name: "Spring Boot", icon: React.createElement(BiLogoSpringBoot) },
+  { name: "Git", icon: React.createElement(FaGitAlt) },
+  { name: "Docker", icon: React.createElement(FaDocker) },
+  { name: "Swagger", icon: React.createElement(SiSwagger) },
+  { name: "Prisma", icon: React.createElement(SiPrisma) },
+  { name: "JWT", icon: React.createElement(SiJsonwebtokens) },
+  { name: "Vercel", icon: React.createElement(SiVercel) },
+  { name: "Firebase", icon: React.createElement(SiFirebase) },
+  { name: "MongoDB", icon: React.createElement(SiMongodb) },
+  { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
+  { name: "MySQL", icon: React.createElement(SiMysql) },
+  { name: "Oracle DB", icon: React.createElement(SiOracle) },
+  { name: "Jest", icon: React.createElement(SiJest) },
+  { name: "Figma", icon: React.createElement(FaFigma) },
+  { name: "ESLint", icon: React.createElement(SiEslint) },
+  { name: "Prettier", icon: React.createElement(SiPrettier) },
+  { name: "Zod", icon: React.createElement(SiZod) },
 ] as const;
 
-// Owner name
 export const OWNER_NAME = "Joshua Elizondo Abarca";
 
-// Original Author Credits (Required by MIT License)
 export const ORIGINAL_AUTHOR_CREDITS = {
   name: "Sanidhya Kumar Verma",
   email: "sanidhya.verma12345@gmail.com",
   github: "https://github.com/sanidhyy",
   repository: "https://github.com/sanidhyy/portfolio",
   license: "MIT",
-  message: "Portfolio template by Sanidhya Kumar Verma - MIT License"
+  message: "Portfolio template by Sanidhya Kumar Verma - MIT License",
 } as const;
