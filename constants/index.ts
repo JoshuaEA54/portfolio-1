@@ -77,60 +77,60 @@ export const EXTRA_LINKS = {
 
 export const EXPERIENCES_DATA = [
   {
-    title: "Passed High School",
+    title: "Advanced Web Development Student",
     description:
-      "Completed my high school curriculum, gaining a solid foundation in various subjects and essential skills.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022",
+      "Currently mastering full-stack development through intensive coursework in Programming IV, Database Systems, Computer Networks, and Operating Systems. Built EduIA (AI-powered learning platform), implemented OAuth flows, JWT authentication, PWA features, and real-time WebSocket communication. Gained expertise in Next.js, TypeScript, Supabase, Sanity CMS, middleware implementation, and modern deployment strategies using Vercel and Railway.",
+    icon: React.createElement(SiNextdotjs),
+    date: "2024 - Present",
   },
   {
-    title: "React.js Bootcamp",
+    title: "Universidad Nacional Guitar Ensemble Member",
     description:
-      "Successfully completed an intensive 1-month React.js Developer Bootcamp. Acquired expertise in React components, state management with Redux, and interacting with RESTful APIs.",
-    icon: React.createElement(CgWorkAlt),
+      "Active member of the university's representative electric guitar ensemble, demonstrating discipline, teamwork, and creative expression. Balancing artistic pursuits with academic excellence while developing leadership and collaboration skills through regular performances and group coordination.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024 - Present",
+  },
+  {
+    title: "Calculus Tutor, Universidad Nacional",
+    description:
+      "Provided comprehensive calculus instruction to first-year engineering and mathematics students. Developed personalized learning strategies that resulted in a 20% improvement in student grades. Created supplementary materials and practice problems, conducted group study sessions, and mentored students in problem-solving techniques and mathematical reasoning.",
+    icon: React.createElement(LuGraduationCap),
     date: "2023",
   },
   {
-    title: "Freelancer React.js Developer",
+    title: "Technology Workshop Facilitator, US Embassy Access Program",
     description:
-      "Worked as a freelance React.js Developer, I have collaborated with various clients to create responsive and dynamic web applications.",
-    icon: React.createElement(FaReact),
-    date: "2023 - 2024",
-  },
-  {
-    title: "Jaro Dev Studio",
-    description:
-      "Currently working as a Full-stack Next.js Developer, building responsive and dynamic web applications using Next.js, Tailwind CSS and OpenAI.",
-    icon: React.createElement(SiNextdotjs),
-    date: "2024 - present",
+      "Led interactive technology workshops for local youth as part of the US Embassy's educational outreach program. Designed and delivered sessions on programming fundamentals, web development, and digital literacy. Collaborated with embassy staff and educators to create inclusive curriculum promoting STEM education and international cooperation.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022",
   },
 ] as const;
 
 
 export const PROJECTS_DATA = [
   {
-    title: "Mi Proyecto 1",
+    title: "EduIA – AI-Powered Learning Platform",
     description:
-      "Describe aquí tu primer proyecto. Qué tecnologías usaste, qué problemas resuelve, etc.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
+      "Revolutionary educational platform reducing quiz creation time by 90%. Features AI-generated content via OpenAI, real-time collaborative sessions with WebSockets, PWA capabilities for offline functionality, and comprehensive analytics. Implements OAuth authentication, JWT token management, and Sanity CMS for media handling. Deployed with Lighthouse performance scores of 95+.",
+    tags: ["Next.js", "OpenAI", "WebSockets", "PWA", "OAuth", "TypeScript", "Sanity", "Vercel"],
+    imageUrl: "/profile.png",
+    projectUrl: "#",
   },
   {
-    title: "Mi Proyecto 2",
+    title: "UNAColabora – Internship Matching Portal",
     description:
-      "Describe aquí tu segundo proyecto. Incluye las características principales y el valor que aporta.",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
+      "Comprehensive platform connecting university students with internship opportunities. Features advanced matching algorithms, company profiles, application tracking, and real-time notifications. Built with modern full-stack architecture using Supabase for backend services, Prisma for database management, and responsive design with Tailwind CSS. Includes complete documentation and system architecture design.",
+    tags: ["React", "Supabase", "Prisma", "TypeScript", "Tailwind", "Algorithms"],
+    imageUrl: "/profile.png",
+    projectUrl: "#",
   },
   {
-    title: "Mi Proyecto 3",
+    title: "Java / Spring Boot REST API Collection",
     description:
-      "Describe aquí tu tercer proyecto. Menciona los desafíos que enfrentaste y cómo los resolviste.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
+      "Small academic APIs (GraphQL & REST). Shows Java backend expertise.",
+    tags: ["Java", "Spring Boot", "GraphQL", "REST API", "PostgreSQL"],
+    imageUrl: "/profile.png",
+    projectUrl: "#",
   },
 ] as const;
 

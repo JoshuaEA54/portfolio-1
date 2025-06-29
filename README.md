@@ -1,8 +1,8 @@
 <a name="readme-top"></a>
 
-# Mi Portfolio Personal - Joshua Elizondo
+# My Personal Portfolio - Joshua Elizondo
 
-![Portfolio Personal](/.github/images/img_main.png "Portfolio Personal")
+![Personal Portfolio](/.github/images/img_main.png "Personal Portfolio")
 
 [![GitHub license](https://flat.badgen.net/github/license/JoshuaEA54/portfolio?icon=github&color=black&scale=1.01)](https://github.com/JoshuaEA54/portfolio/blob/main/LICENSE "GitHub license")
 [![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/JoshuaEA54/portfolio/commits/main "Maintenance")
@@ -12,23 +12,23 @@
 
 <summary>
 
-# :notebook_with_decorative_cover: Tabla de Contenidos
+# :notebook_with_decorative_cover: Table of Contents
 
 </summary>
 
-- [Estructura de Carpetas](#bangbang-estructura-de-carpetas)
-- [Empezar](#toolbox-empezar)
-- [Capturas de Pantalla](#camera-capturas-de-pantalla)
-- [Stack Tecnológico](#gear-stack-tecnológico)
-- [Créditos](#gem-créditos)
-- [Aprende Más](#books-aprende-más)
-- [Desplegar en Vercel](#page_with_curl-desplegar-en-vercel)
+- [Folder Structure](#bangbang-folder-structure)
+- [Getting Started](#toolbox-getting-started)
+- [Screenshots](#camera-screenshots)
+- [Tech Stack](#gear-tech-stack)
+- [Credits](#gem-credits)
+- [Learn More](#books-learn-more)
+- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
 
 </details>
 
-## :bangbang: Estructura de Carpetas
+## :bangbang: Folder Structure
 
-Aquí está la estructura de carpetas de mi Portfolio.
+Here is the folder structure of my Portfolio.
 
 ```bash
 portfolio/
@@ -77,12 +77,12 @@ portfolio/
 
 <br />
 
-## :toolbox: Empezar
+## :toolbox: Getting Started
 
-1. Asegúrate de que **Git** y **NodeJS** estén instalados.
-2. Clona este repositorio en tu computadora local.
-3. Crea un archivo `.env.local` en la carpeta raíz.
-4. Contenido de `.env.local`:
+1. Make sure **Git** and **NodeJS** are installed.
+2. Clone this repository to your local computer.
+3. Create a `.env.local` file in the root folder.
+4. Contents of `.env.local`:
 
 ```env
 # .env.local
@@ -100,46 +100,46 @@ NEXT_PUBLIC_GOOGLE_VERIFICATION_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ```
 
-5. Crea una nueva cuenta en [EmailJS](https://www.emailjs.com/ "EmailJS").
+5. Create a new account at [EmailJS](https://www.emailjs.com/ "EmailJS").
 
-6. Desde el dashboard, elige Email Services > Add New Service y conecta tu correo a emailjs.
+6. From the dashboard, choose Email Services > Add New Service and connect your email to emailjs.
 
-7. Una vez configurado el nuevo servicio, copia tu **Service ID** a `NEXT_PUBLIC_EMAILJS_SERVICE_ID`.
+7. Once the new service is configured, copy your **Service ID** to `NEXT_PUBLIC_EMAILJS_SERVICE_ID`.
 
-8. Ahora, ve a Email Templates > Create New Template para crear tu plantilla de correo. Una vez hecho, puedes copiar el **Template ID** a `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`.
+8. Now, go to Email Templates > Create New Template to create your email template. Once done, you can copy the **Template ID** to `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`.
 
-9. Para obtener tu **Public Key**, haz clic en tu nombre de usuario en la barra de navegación y ve a configuración de cuenta > Copia Public Key a `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`.
+9. To get your **Public Key**, click on your username in the navigation bar and go to account settings > Copy Public Key to `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`.
 
-10. Abre la terminal en el directorio raíz. Ejecuta `npm install` o `bun install`.
+10. Open the terminal in the root directory. Run `npm install` or `bun install`.
 
-11. Ahora la aplicación está completamente configurada :+1: y puedes comenzar a usar esta aplicación usando `npm run dev` o `bun dev`.
+11. Now the application is fully configured :+1: and you can start using this application using `npm run dev` or `bun dev`.
 
-**NOTA:** Asegúrate de no compartir estas claves públicamente.
+**NOTE:** Make sure not to share these keys publicly.
 
-## :camera: Capturas de Pantalla:
+## :camera: Screenshots:
 
-![Interfaz Moderna con Tailwind CSS](/.github/images/img1.png "Interfaz Moderna con Tailwind CSS")
+![Modern Interface with Tailwind CSS](/.github/images/img1.png "Modern Interface with Tailwind CSS")
 
-![Showcase de Proyectos](/.github/images/img2.png "Showcase de Proyectos")
+![Projects Showcase](/.github/images/img2.png "Projects Showcase")
 
-![Experiencias Profesionales](/.github/images/img3.png "Experiencias Profesionales")
+![Professional Experiences](/.github/images/img3.png "Professional Experiences")
 
-![Formulario de Contacto Funcional](/.github/images/img4.png "Formulario de Contacto Funcional")
+![Functional Contact Form](/.github/images/img4.png "Functional Contact Form")
 
-## :gear: Stack Tecnológico
+## :gear: Tech Stack
 
 [![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Vercel](https://skillicons.dev/icons?i=vercel "Vercel")](https://vercel.app/ "Vercel")
 
-## :gem: Créditos
+## :gem: Credits
 
-### Autor Original
-Este portfolio está basado en el excelente trabajo de **[Sanidhya Kumar Verma](https://github.com/sanidhyy)**.
+### Original Author
+This portfolio is based on the excellent work of **[Sanidhya Kumar Verma](https://github.com/sanidhyy)**.
 
-- **Repositorio Original**: [sanidhyy/portfolio](https://github.com/sanidhyy/portfolio)
-- **Autor**: Sanidhya Kumar Verma
-- **Licencia**: MIT
+- **Original Repository**: [sanidhyy/portfolio](https://github.com/sanidhyy/portfolio)
+- **Author**: Sanidhya Kumar Verma
+- **License**: MIT
 
-### Librerías y Recursos Útiles
+### Useful Libraries and Resources
 
 - [Email JS](https://www.emailjs.com/ "Email JS")
 - [Framer Motion](https://www.framer.com/motion/ "Framer Motion")
@@ -150,24 +150,24 @@ Este portfolio está basado en el excelente trabajo de **[Sanidhya Kumar Verma](
 - [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer "React Intersection Observer")
 - [Next PWA](https://www.npmjs.com/package/next-pwa "Next PWA")
 
-## :books: Aprende Más
+## :books: Learn More
 
-Para aprender más sobre Next.js, echa un vistazo a los siguientes recursos:
+To learn more about Next.js, take a look at the following resources:
 
-- [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
-- [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Puedes revisar [el repositorio de GitHub de Next.js](https://github.com/vercel/next.js/) - ¡tus comentarios y contribuciones son bienvenidos!
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## :page_with_curl: Desplegar en Vercel
+## :page_with_curl: Deploy on Vercel
 
-La forma más fácil de desplegar tu aplicación Next.js es usar la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Consulta nuestra [documentación de despliegue de Next.js](https://nextjs.org/docs/deployment) para más detalles.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ---
 
-**Nota**: Si utilizas esta plantilla, por favor mantén los créditos al autor original según la licencia MIT.
+**Note**: If you use this template, please keep the credits to the original author according to the MIT license.
 
 <br />
-<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

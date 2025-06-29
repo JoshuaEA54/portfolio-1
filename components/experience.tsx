@@ -29,7 +29,7 @@ const Experience = () => {
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>Mi experiencia</SectionHeading>
+      <SectionHeading>My experience</SectionHeading>
 
       <VerticalTimeline lineColor="">
         {EXPERIENCES_DATA.map((experience, i) => (
