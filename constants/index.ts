@@ -1,5 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import {
   FaReact,
   FaNodeJs,
@@ -37,7 +36,6 @@ import {
 } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 
-
 export const LINKS = [
   {
     name: "Home",
@@ -65,7 +63,6 @@ export const LINKS = [
   },
 ] as const;
 
-
 export const EXTRA_LINKS = {
   linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
   github: "https://github.com/JoshuaEA54",
@@ -74,69 +71,50 @@ export const EXTRA_LINKS = {
   source_code: "https://github.com/JoshuaEA54/portfolio",
 } as const;
 
-
 export const EXPERIENCES_DATA = [
   {
-    title: "Passed High School",
+    title: "Full-Stack Developer in Training",
     description:
-      "Completed my high school curriculum, gaining a solid foundation in various subjects and essential skills.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022",
+      "Information Systems engineering student building production-grade apps. Created EduIA—an AI-powered learning platform featuring Google OAuth, JWT-secured APIs and real-time WebSocket sessions.",
+    icon: React.createElement(SiNextdotjs),
+    date: "2024 - Present",
   },
   {
-    title: "React.js Bootcamp",
+    title: "Electric Guitarist - Universidad Nacional Ensemble",
     description:
-      "Successfully completed an intensive 1-month React.js Developer Bootcamp. Acquired expertise in React components, state management with Redux, and interacting with RESTful APIs.",
-    icon: React.createElement(CgWorkAlt),
+      "Lead electric guitarist in the university ensemble, honing discipline and standout stage presence through weekly rehearsals and campus shows.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024 - Present",
+  },
+  {
+    title: "Calculus Tutor, Universidad Nacional",
+    description:
+      "Provided comprehensive calculus instruction to first-year engineering students and mentored students in problem-solving techniques and mathematical reasoning.",
+    icon: React.createElement(LuGraduationCap),
     date: "2023",
   },
-  {
-    title: "Freelancer React.js Developer",
-    description:
-      "Worked as a freelance React.js Developer, I have collaborated with various clients to create responsive and dynamic web applications.",
-    icon: React.createElement(FaReact),
-    date: "2023 - 2024",
-  },
-  {
-    title: "Jaro Dev Studio",
-    description:
-      "Currently working as a Full-stack Next.js Developer, building responsive and dynamic web applications using Next.js, Tailwind CSS and OpenAI.",
-    icon: React.createElement(SiNextdotjs),
-    date: "2024 - present",
-  },
 ] as const;
-
 
 export const PROJECTS_DATA = [
   {
-    title: "Mi Proyecto 1",
+    title: "EduIA - AI-Powered Learning Platform",
     description:
-      "Describe aquí tu primer proyecto. Qué tecnologías usaste, qué problemas resuelve, etc.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
+      "Revolutionary educational platform reducing quiz creation time by 90%, and real-time student's feedback analysis by the AI.",
+    tags: ["Next.js", "OpenAI", "WebSockets", "OAuth", "TypeScript", "Sanity"],
+    imageUrl: "/eduIA.png",
+    projectUrl: "https://eduia.up.railway.app/",
   },
   {
-    title: "Mi Proyecto 2",
+    title: "Universities Management API",
     description:
-      "Describe aquí tu segundo proyecto. Incluye las características principales y el valor que aporta.",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
-  },
-  {
-    title: "Mi Proyecto 3",
-    description:
-      "Describe aquí tu tercer proyecto. Menciona los desafíos que enfrentaste y cómo los resolviste.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    imageUrl: "/profile.png", // Usando imagen existente temporalmente
-    projectUrl: "#", // Placeholder - cambiar por tu URL real
+      "A comprehensive RESTful API designed to facilitate the management of educational activities within university environments.",
+    tags: ["Java", "Spring", "JWT", "Swagger", "Docker", "Lombok"],
+    imageUrl: "/UniversitiesManagementAPI.png",
+    projectUrl: "#",
   },
 ] as const;
 
-
 export const SKILLS_DATA = [
-  
   { name: "JavaScript", icon: React.createElement(SiJavascript) },
   { name: "TypeScript", icon: React.createElement(SiTypescript) },
   { name: "Python", icon: React.createElement(FaPython) },

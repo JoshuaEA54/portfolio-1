@@ -1,5 +1,4 @@
-// Import necessary dependencies and components.
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+"use client"; 
 
 import React, { useEffect, useState } from "react";
 import {
@@ -16,7 +15,6 @@ import SectionHeading from "./section-heading";
 
 import "react-vertical-timeline-component/style.min.css";
 
-// Define the Experience component.
 const Experience = () => {
   const { ref } = useSectionInView("Experience", 0.5);
   const { theme } = useThemeContext();
@@ -26,12 +24,11 @@ const Experience = () => {
     useState(false);
 
   useEffect((): void => {
-    // Set isExperienceSectionActive to true when the active section is "Experience".
     if (activeSection === "Experience") setIsExperienceSectionActive(true);
   }, [activeSection]);
 
   return (
-    <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+    <section ref={ref} id="experience" className="scroll-mt-28 mb-20">
       <SectionHeading>My experience</SectionHeading>
 
       <VerticalTimeline lineColor="">
@@ -74,5 +71,4 @@ const Experience = () => {
   );
 };
 
-// Export the Experience component.
 export default Experience;

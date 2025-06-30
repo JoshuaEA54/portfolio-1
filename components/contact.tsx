@@ -1,22 +1,18 @@
-// Import necessary dependencies and components.
-"use client"; // This comment indicates that this code should run on the client side in Next.js.
+"use client";
 
 import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { createRef, FormEvent, useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
-
 import { EXTRA_LINKS } from "@/constants";
 import { useSectionInView } from "@/lib/hooks";
 
 import SectionHeading from "./section-heading";
 
-// Define the Contact component.
 const Contact = () => {
-  // Use the useSectionInView custom hook to track when the "Contact" section is in view.
   const { ref } = useSectionInView("Contact");
   const [loading, setLoading] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -25,108 +21,74 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  const recaptchaRef = createRef<ReCAPTCHA>();
-
-  // Handle form field changes.
-  const handleChange = (e: FormEvent) => {
-    // Extract the field name and value from the event.
-    const { name, value } = e.target as HTMLInputElement;
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleCaptchaChange = (value: string | null) => {
-    if (!value) return;
-
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-        {
-          to_name: form.name,
-          to_email: form.email,
-          message: form.message,
-
-          // verifying google recaptcha
-          "g-recaptcha-response": value,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
-      )
-      .then(
-        () => {
-          // Success: Display a success message using toast.
-          toast.success(
-            "Thank You. I will get back to you as soon as possible."
-          );
-        },
-        (error: EmailJSResponseStatus) => {
-          // Error handling: Display an error message and log the error.
-          console.error(error);
-          toast.error(error.text ?? "Something went wrong!");
-        }
-      )
-      .finally(() => {
-        // Clear the loading indicator, and reset the form fields.
-        setLoading(false);
-        recaptchaRef?.current?.reset();
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      });
-  };
-
-  // Validate the form on submission.
   const validateForm = (): boolean => {
-    // Extract form fields.
     const { name, email, message } = form;
 
-    // Validate the name field.
     if (name.trim().length < 3) {
-      toast.error("Invalid Name");
+      toast.error("Name too short");
       return false;
     }
 
-    // Regular expression for email validation.
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    // Validate the email field.
     if (!email.trim().toLowerCase().match(emailRegex)) {
       toast.error("Invalid E-mail");
       return false;
     }
 
-    // Validate the message field.
     if (message.trim().length < 5) {
-      toast.error("Invalid Message");
+      toast.error("Message too short");
       return false;
     }
 
     return true;
   };
 
-  // Handle form submission.
-  const handleSubmit = (e: FormEvent) => {
-    // Prevent the default page reload.
-    e.preventDefault();
-
-    // Validate the form.
-    if (!validateForm()) return false;
-
-    // Show a loading indicator.
-    setLoading(true);
-
-    if (!recaptchaRef) return;
-
-    // execute google recaptcha
-    recaptchaRef.current?.execute();
+  const sendEmail = async (token: string) => {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+        "g-recaptcha-response": token,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
   };
 
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) return;
 
-  // Return the Contact section with animations and the contact form.
+    setLoading(true);
+
+    try {
+      const token = await recaptchaRef.current?.executeAsync();
+      if (!token) throw new Error("Captcha failed");
+
+      await sendEmail(token);
+      toast.success("Thank you! I'll get back to you soon.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error(err);
+      toast.error(err?.text ?? err?.message ?? "Unexpected error");
+    } finally {
+      setLoading(false);
+      recaptchaRef.current?.reset();
+    }
+  };
+
+  const handleChange = (e: FormEvent) => {
+    const { name, value } = e.target as HTMLInputElement;
+    setForm({ ...form, [name]: value });
+  };
+
   return (
     <motion.section
       id="contact"
@@ -158,7 +120,6 @@ const Contact = () => {
         ref={formRef}
         onSubmit={handleSubmit}
       >
-        {/* Input fields for name, email, and message. */}
         <input
           type="text"
           name="name"
@@ -185,7 +146,7 @@ const Contact = () => {
           className="h-14 rounded-lg my-4 px-4 borderBlack disabled:opacity-75 disabled:cursor-not-allowed dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           required
           maxLength={100}
-          autoComplete="off"
+          autoComplete="email"
           autoCapitalize="off"
         />
 
@@ -204,17 +165,9 @@ const Contact = () => {
         />
 
         {siteKey && (
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            aria-disabled={loading}
-            size="invisible"
-            sitekey={siteKey}
-            onChange={handleCaptchaChange}
-            className="mb-4"
-          />
+          <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={siteKey} />
         )}
 
-        {/* Submit button with conditional rendering for loading state. */}
         <button
           type="submit"
           className="group flex self-center items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 disabled:scale-100 disabled:bg-opacity-65 dark:bg-white dark:bg-opacity-10"
@@ -234,5 +187,4 @@ const Contact = () => {
   );
 };
 
-// Export the Contact component.
 export default Contact;
