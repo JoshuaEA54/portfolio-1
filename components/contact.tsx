@@ -1,13 +1,12 @@
-"use client"; 
+"use client";
 
 import emailjs, { type EmailJSResponseStatus } from "@emailjs/browser";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { createRef, FormEvent, useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
-
 import { EXTRA_LINKS } from "@/constants";
 import { useSectionInView } from "@/lib/hooks";
 
@@ -22,57 +21,14 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
-  const recaptchaRef = createRef<ReCAPTCHA>();
-
-  const handleChange = (e: FormEvent) => {
-    const { name, value } = e.target as HTMLInputElement;
-    setForm({ ...form, [name]: value });
-  };
-
-  const handleCaptchaChange = (value: string | null) => {
-    if (!value) return;
-
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-        {
-          to_name: form.name,
-          to_email: form.email,
-          message: form.message,
-
-          "g-recaptcha-response": value,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
-      )
-      .then(
-        () => {
-          toast.success(
-            "Thank You. I will get back to you as soon as possible."
-          );
-        },
-        (error: EmailJSResponseStatus) => {
-          console.error(error);
-          toast.error(error.text ?? "Something went wrong!");
-        }
-      )
-      .finally(() => {
-        setLoading(false);
-        recaptchaRef?.current?.reset();
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      });
-  };
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const validateForm = (): boolean => {
     const { name, email, message } = form;
 
     if (name.trim().length < 3) {
-      toast.error("Invalid Name");
+      toast.error("Name too short");
       return false;
     }
 
@@ -85,26 +41,53 @@ const Contact = () => {
     }
 
     if (message.trim().length < 5) {
-      toast.error("Invalid Message");
+      toast.error("Message too short");
       return false;
     }
 
     return true;
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+  const sendEmail = async (token: string) => {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+        "g-recaptcha-response": token,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
+  };
 
-    if (!validateForm()) return false;
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) return;
 
     setLoading(true);
 
-    if (!recaptchaRef) return;
+    try {
+      const token = await recaptchaRef.current?.executeAsync();
+      if (!token) throw new Error("Captcha failed");
 
-    recaptchaRef.current?.execute();
+      await sendEmail(token);
+      toast.success("Thank you! I'll get back to you soon.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      console.error(err);
+      toast.error(err?.text ?? err?.message ?? "Unexpected error");
+    } finally {
+      setLoading(false);
+      recaptchaRef.current?.reset();
+    }
   };
 
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+  const handleChange = (e: FormEvent) => {
+    const { name, value } = e.target as HTMLInputElement;
+    setForm({ ...form, [name]: value });
+  };
 
   return (
     <motion.section
@@ -163,7 +146,7 @@ const Contact = () => {
           className="h-14 rounded-lg my-4 px-4 borderBlack disabled:opacity-75 disabled:cursor-not-allowed dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           required
           maxLength={100}
-          autoComplete="off"
+          autoComplete="email"
           autoCapitalize="off"
         />
 
@@ -182,14 +165,7 @@ const Contact = () => {
         />
 
         {siteKey && (
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            aria-disabled={loading}
-            size="invisible"
-            sitekey={siteKey}
-            onChange={handleCaptchaChange}
-            className="mb-4"
-          />
+          <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={siteKey} />
         )}
 
         <button

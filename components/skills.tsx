@@ -53,7 +53,7 @@ const Skills = () => {
   const secondRow = SKILLS_DATA.slice(midPoint);
 
   return (
-    <section ref={ref} className="scroll-mt-14 text-center my-14" id="skills">
+    <section ref={ref} className="scroll-mt-28 text-center mb-20" id="skills">
       <SectionHeading>My Skills</SectionHeading>
       
       <div className="w-screen xl:px-52 lg:px-40  md:px-28 sm:px-20 px-10">

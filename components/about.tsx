@@ -16,7 +16,7 @@ const About = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-20 max-w-[45rem] text-center leading-8  scroll-mt-28"
     >
       <SectionHeading>About me</SectionHeading>
 
@@ -30,8 +30,8 @@ const About = () => {
       <p className="mb-3">
         This semester I've mastered <b className="font-medium">Database Systems (Oracle, Firebase), 
         Computer Networks, Operating Systems, and Advanced Web Programming</b>. I recently shipped 
-        <b className="font-medium"> EduIA</b>, an AI-powered learning platform using OpenAI, Sanity, 
-        and PWA technologies that transforms educational content creation.
+        <b className="font-medium"> EduIA</b>, an AI-powered learning platform using Websockets, 
+        OpenAI, Typescript and React technologies, transforming educational content creation.
       </p>
 
       <p className="mb-3">

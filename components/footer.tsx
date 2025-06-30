@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="mb-10 px-4 text-center text-gray-500">
       <p className="text-xs">
         <b className="font-semibold">About this website:</b> built with React
-        &amp; Next.js (App Router and Server Actions), Typescript, Tailwind CSS,
+        &amp; Next.js, Typescript, Tailwind CSS,
         Framer Motion, EmailJS, React Toaster, React Vertical Timeline &amp;
         Vercel Hosting.
       </p>      <p className="text-xs mt-2 text-gray-400">

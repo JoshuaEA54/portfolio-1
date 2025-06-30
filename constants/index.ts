@@ -1,5 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import {
   FaReact,
   FaNodeJs,
@@ -37,7 +36,6 @@ import {
 } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 
-
 export const LINKS = [
   {
     name: "Home",
@@ -65,7 +63,6 @@ export const LINKS = [
   },
 ] as const;
 
-
 export const EXTRA_LINKS = {
   linkedin: "https://www.linkedin.com/in/joshua-elizondo-abarca/",
   github: "https://github.com/JoshuaEA54",
@@ -74,69 +71,50 @@ export const EXTRA_LINKS = {
   source_code: "https://github.com/JoshuaEA54/portfolio",
 } as const;
 
-
 export const EXPERIENCES_DATA = [
   {
-    title: "Advanced Web Development Student",
+    title: "Full-Stack Developer in Training",
     description:
-      "Currently mastering full-stack development through intensive coursework in Programming IV, Database Systems, Computer Networks, and Operating Systems. Built EduIA (AI-powered learning platform), implemented OAuth flows, JWT authentication, PWA features, and real-time WebSocket communication. Gained expertise in Next.js, TypeScript, Supabase, Sanity CMS, middleware implementation, and modern deployment strategies using Vercel and Railway.",
+      "Information Systems engineering student building production-grade apps. Created EduIA—an AI-powered learning platform featuring Google OAuth, JWT-secured APIs and real-time WebSocket sessions.",
     icon: React.createElement(SiNextdotjs),
     date: "2024 - Present",
   },
   {
-    title: "Universidad Nacional Guitar Ensemble Member",
+    title: "Electric Guitarist - Universidad Nacional Ensemble",
     description:
-      "Active member of the university's representative electric guitar ensemble, demonstrating discipline, teamwork, and creative expression. Balancing artistic pursuits with academic excellence while developing leadership and collaboration skills through regular performances and group coordination.",
+      "Lead electric guitarist in the university ensemble, honing discipline and standout stage presence through weekly rehearsals and campus shows.",
     icon: React.createElement(LuGraduationCap),
     date: "2024 - Present",
   },
   {
     title: "Calculus Tutor, Universidad Nacional",
     description:
-      "Provided comprehensive calculus instruction to first-year engineering and mathematics students. Developed personalized learning strategies that resulted in a 20% improvement in student grades. Created supplementary materials and practice problems, conducted group study sessions, and mentored students in problem-solving techniques and mathematical reasoning.",
+      "Provided comprehensive calculus instruction to first-year engineering students and mentored students in problem-solving techniques and mathematical reasoning.",
     icon: React.createElement(LuGraduationCap),
     date: "2023",
   },
-  {
-    title: "Technology Workshop Facilitator, US Embassy Access Program",
-    description:
-      "Led interactive technology workshops for local youth as part of the US Embassy's educational outreach program. Designed and delivered sessions on programming fundamentals, web development, and digital literacy. Collaborated with embassy staff and educators to create inclusive curriculum promoting STEM education and international cooperation.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2022",
-  },
 ] as const;
-
 
 export const PROJECTS_DATA = [
   {
-    title: "EduIA – AI-Powered Learning Platform",
+    title: "EduIA - AI-Powered Learning Platform",
     description:
-      "Revolutionary educational platform reducing quiz creation time by 90%. Features AI-generated content via OpenAI, real-time collaborative sessions with WebSockets, PWA capabilities for offline functionality, and comprehensive analytics. Implements OAuth authentication, JWT token management, and Sanity CMS for media handling. Deployed with Lighthouse performance scores of 95+.",
-    tags: ["Next.js", "OpenAI", "WebSockets", "PWA", "OAuth", "TypeScript", "Sanity", "Vercel"],
-    imageUrl: "/profile.png",
-    projectUrl: "#",
+      "Revolutionary educational platform reducing quiz creation time by 90%, and real-time student's feedback analysis by the AI.",
+    tags: ["Next.js", "OpenAI", "WebSockets", "OAuth", "TypeScript", "Sanity"],
+    imageUrl: "/eduIA.png",
+    projectUrl: "https://eduia.up.railway.app/",
   },
   {
-    title: "UNAColabora – Internship Matching Portal",
+    title: "Universities Management API",
     description:
-      "Comprehensive platform connecting university students with internship opportunities. Features advanced matching algorithms, company profiles, application tracking, and real-time notifications. Built with modern full-stack architecture using Supabase for backend services, Prisma for database management, and responsive design with Tailwind CSS. Includes complete documentation and system architecture design.",
-    tags: ["React", "Supabase", "Prisma", "TypeScript", "Tailwind", "Algorithms"],
-    imageUrl: "/profile.png",
-    projectUrl: "#",
-  },
-  {
-    title: "Java / Spring Boot REST API Collection",
-    description:
-      "Small academic APIs (GraphQL & REST). Shows Java backend expertise.",
-    tags: ["Java", "Spring Boot", "GraphQL", "REST API", "PostgreSQL"],
-    imageUrl: "/profile.png",
+      "A comprehensive RESTful API designed to facilitate the management of educational activities within university environments.",
+    tags: ["Java", "Spring", "JWT", "Swagger", "Docker", "Lombok"],
+    imageUrl: "/UniversitiesManagementAPI.png",
     projectUrl: "#",
   },
 ] as const;
 
-
 export const SKILLS_DATA = [
-  
   { name: "JavaScript", icon: React.createElement(SiJavascript) },
   { name: "TypeScript", icon: React.createElement(SiTypescript) },
   { name: "Python", icon: React.createElement(FaPython) },

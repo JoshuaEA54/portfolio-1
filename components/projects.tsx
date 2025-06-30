@@ -74,8 +74,8 @@ const Project = ({
           <Image
             src={imageUrl}
             alt={title}
-            width={452}
-            height={300}
+            width={480}
+            height={360}
             quality={95}
             className="absolute hidden sm:block top-8 -right-40 w-[28.25rem]
             rounded-t-lg shadow-2xl group-even:right-[initial] 
@@ -106,7 +106,7 @@ const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-20">
       <SectionHeading>My projects</SectionHeading>
       <div>
         {PROJECTS_DATA.map((project, i) => (
